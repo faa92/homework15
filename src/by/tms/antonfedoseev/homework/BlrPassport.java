@@ -29,11 +29,11 @@ public class BlrPassport {
             throw new IllegalArgumentException("Invalid information");
         }
     }
-    public boolean isValidIDNumber (String iD) {
-        if (iD.length() != LENGTH_ID_NUMBER_BLR) {
+    public boolean isValidIDNumber (String identificationNumber) {
+        if (identificationNumber.length() != LENGTH_ID_NUMBER_BLR) {
             throw new IllegalArgumentException("Invalid number");
         }
-        return iD.matches("\\d{7}[ABCKEMH]\\d{3}[PB|BA|BI]\\d");
+        return identificationNumber.matches("\\d{7}[ABCKEMH]\\d{3}[PB|BA|BI]\\d");
     }
     public boolean isValidNameAndLastName (String name, String lastName) {
         if (name == null || lastName == null) {
@@ -56,13 +56,22 @@ public class BlrPassport {
     public boolean isExpired (LocalDate now) {
     return now.isBefore(dateOfExpiry);
     }
-    public String toString () {
-      return   "Belarusian Passport: ";
 
-    }
     public boolean isValidPassport (String lastName, String name, String passportNumber,
                                     String identificationNumber, LocalDate dateOfIssue, LocalDate dateOfExpiry) {
         return isValidNameAndLastName(name, lastName) && isValidPassNumber(passportNumber) && isValidIDNumber(identificationNumber) && isValidDataUse(dateOfIssue, dateOfExpiry) && isExpired(LocalDate.now());
+    }
+
+    public String toString () {
+        return  "Belarusian Passport: \n"+
+                "Last name - " + lastName + "\n"+
+                "Name - " + name + "\n" +
+                "Sex - " + sex + "\n" +
+                "Date of berth - " + dateOfBirth + "\n" +
+                "Passport number - " + passportNumber + "\n" +
+                "Identification number - " + identificationNumber + "\n" +
+                "Date of issue - " + dateOfIssue + "\n" +
+                "Date of expiry - " + dateOfExpiry + "\n";
     }
 
 //    LocalDate passportExpirationDate = LocalDate.of(2025, 2, 13);
