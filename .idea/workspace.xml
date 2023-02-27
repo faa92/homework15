@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d137394-0f5a-41d4-a951-4b4b6eaf2b4f" name="Changes" comment="error">
+    <list default="true" id="7d137394-0f5a-41d4-a951-4b4b6eaf2b4f" name="Changes" comment="error 2.0">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/by/tms/antonfedoseev/homework/BlrPassport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/tms/antonfedoseev/homework/BlrPassport.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/by/tms/antonfedoseev/homework/homework15.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/tms/antonfedoseev/homework/homework15.java" afterDir="false" />
@@ -80,6 +80,7 @@
       <option name="presentableId" value="Default" />
       <updated>1677350612801</updated>
       <workItem from="1677397956628" duration="15418000" />
+      <workItem from="1677499937609" duration="6016000" />
     </task>
     <task id="LOCAL-00001" summary="error">
       <created>1677438127221</created>
@@ -106,13 +107,6 @@
                     <value>
                       <list>
                         <option value="feature-Passport" />
-                      </list>
-                    </value>
-                  </entry>
-                  <entry key="text">
-                    <value>
-                      <list>
-                        <option value="c" />
                       </list>
                     </value>
                   </entry>
