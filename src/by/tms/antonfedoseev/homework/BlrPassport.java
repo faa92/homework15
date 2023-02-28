@@ -7,19 +7,19 @@ public class BlrPassport {
     public static final int LENGTH_PASSPORT_NUMBER = 9;
     private String lastName;
     private String name;
-    private String sex;
+    private String gender;
     private LocalDate dateOfBirth;
     private String passportNumber;
     private String identificationNumber;
     private LocalDate dateOfIssue;
     private LocalDate dateOfExpiry;
 
-    public BlrPassport(String lastName, String name, String sex, LocalDate dateOfBirth, String passportNumber,
+    public BlrPassport(String lastName, String name, String gender, LocalDate dateOfBirth, String passportNumber,
                        String identificationNumber, LocalDate dateOfIssue, LocalDate dateOfExpiry) {
         if (isValidPassport(lastName, name, passportNumber, identificationNumber, dateOfIssue, dateOfExpiry)) {
             this.lastName = lastName;
             this.name = name;
-            this.sex = sex;
+            this.gender = gender;
             this.dateOfBirth = dateOfBirth;
             this.passportNumber = passportNumber;
             this.identificationNumber = identificationNumber;
@@ -32,7 +32,8 @@ public class BlrPassport {
 
     public boolean isValidPassport(String lastName, String name, String passportNumber,
                                    String identificationNumber, LocalDate dateOfIssue, LocalDate dateOfExpiry) {
-        return isValidNameAndLastName(name, lastName) && isValidPassNumber(passportNumber) && isValidDataUse(dateOfIssue, dateOfExpiry) && isValidIDNumber(identificationNumber);
+        return isValidNameAndLastName(name, lastName) && isValidPassNumber(passportNumber) &&
+                isValidDataUse(dateOfIssue, dateOfExpiry) && isValidIDNumber(identificationNumber);
 
     }
 
@@ -65,7 +66,7 @@ public class BlrPassport {
         return "Belarusian Passport: \n" +
                 "Last name - " + lastName + "\n" +
                 "Name - " + name + "\n" +
-                "Sex - " + sex + "\n" +
+                "Gender - " + gender + "\n" +
                 "Date of berth - " + dateOfBirth + "\n" +
                 "Passport number - " + passportNumber + "\n" +
                 "Identification number - " + identificationNumber + "\n" +
