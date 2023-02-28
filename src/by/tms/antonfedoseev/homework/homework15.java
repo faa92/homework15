@@ -52,6 +52,12 @@ public class homework15 {
                         blrPassport.isExpired(LocalDate.now(ZoneId.of("Europe/Minsk"))));
             }
             case 2 -> {
+                System.out.println("Enter bad words separated by comma");
+                String userBadWords = scanner.nextLine();
+                String[] inputArrBadWords = userBadWords.split(", ");
+
+                TextBlackListFilter filter = new TextBlackListFilter(inputArrBadWords);
+                System.out.println();
             }
             case 0 -> {
                 return;

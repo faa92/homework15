@@ -57,5 +57,10 @@ public class TextBlackListFilter {
         return text;
     }
 
+//    public Pattern getPattern (String text) {
+//        return Pattern.compile("\\b" + badWords[i] + "\\b", Pattern.UNICODE_CHARACTER_CLASS |
+//                Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
+//    }
+
 
 }
