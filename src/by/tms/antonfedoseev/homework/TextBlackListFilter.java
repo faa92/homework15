@@ -5,21 +5,27 @@ import java.util.regex.Pattern;
 
 public class TextBlackListFilter {
     private String[] badWords;
+    private final Pattern[] pattern;
     public TextBlackListFilter(String badWords) {
         this.badWords = badWords.split(", ");
+        this.pattern = new Pattern[badWords.length()];
+        for (int i = 0; i < badWords.length(); i++) {
+            pattern[i] = Pattern.compile("\\b" + Pattern.quote(badWords) + "\\b",
+                    Pattern.UNICODE_CHARACTER_CLASS |
+                            Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
+        }
     }
+
     public boolean hasBadWords(String text) {
         if (text == null) {
             throw new IllegalArgumentException("Enter text!");
         }
+
         for (int i = 0; i < badWords.length; i++) {
-            boolean res;
-            Pattern pattern = Pattern.compile("\\b" + Pattern.quote(badWords[i]) + "\\b",
-                    Pattern.UNICODE_CHARACTER_CLASS |
-                            Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
+            Pattern pattern = this.pattern[text.length()];
             Matcher matcher = pattern.matcher(text);
-            res = matcher.find();
-            if (res) {
+
+            if (matcher.find()) {
                 return true;
             }
         }
@@ -31,12 +37,13 @@ public class TextBlackListFilter {
         }
         int count = 0;
         for (int i = 0; i < badWords.length; i++) {
-            Pattern pattern = Pattern.compile("\\b" + Pattern.quote(badWords[i]) + "\\b",
-                    Pattern.UNICODE_CHARACTER_CLASS |
-                            Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
+            Pattern pattern = this.pattern[text.length()];
             Matcher matcher = pattern.matcher(text);
-            if (matcher.find()) {
-                count++;
+
+            while (matcher.find()) {
+                if (matcher.find()) {
+                    count++;
+                }
             }
         }
         return count;
@@ -46,11 +53,9 @@ public class TextBlackListFilter {
             throw new IllegalArgumentException("Enter text!");
         }
         for (int i = 0; i < badWords.length; i++) {
-            Pattern pattern = Pattern.compile("\\b" + Pattern.quote(badWords[i]) + "\\b",
-                    Pattern.UNICODE_CHARACTER_CLASS |
-                            Pattern.UNICODE_CASE | Pattern.CASE_INSENSITIVE);
+            Pattern pattern = this.pattern[text.length()];
             Matcher matcher = pattern.matcher(text);
-            text = text.replaceAll(badWords[i], "####");
+            text = text.replaceAll(Pattern.quote(badWords[i]), "####");
         }
         return text;
     }

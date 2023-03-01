@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d137394-0f5a-41d4-a951-4b4b6eaf2b4f" name="Changes" comment="HomeWork15. badWords review" />
-    <list default="true" id="7d137394-0f5a-41d4-a951-4b4b6eaf2b4f" name="Changes" comment="HomeWork15. badWords">
+    <list default="true" id="7d137394-0f5a-41d4-a951-4b4b6eaf2b4f" name="Changes" comment="HomeWork15. badWords review 1.2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/tms/antonfedoseev/homework/BlrPassport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/tms/antonfedoseev/homework/BlrPassport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/by/tms/antonfedoseev/homework/TextBlackListFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/tms/antonfedoseev/homework/TextBlackListFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/by/tms/antonfedoseev/homework/homework15.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/tms/antonfedoseev/homework/homework15.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,13 +18,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature-Passport" />
+        <entry key="$PROJECT_DIR$" value="1ece341225a8f7dc8617c0f4c8e8002720bd9864" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -82,8 +82,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TextBlackListFilter" />
         <item itemvalue="Application.homework15" />
+        <item itemvalue="Application.TextBlackListFilter" />
         <item itemvalue="Application.homework15" />
         <item itemvalue="Application.TextBlackListFilter" />
       </list>
@@ -100,7 +100,9 @@
       <workItem from="1677397956628" duration="15418000" />
       <workItem from="1677499937609" duration="15624000" />
       <workItem from="1677586372746" duration="6709000" />
-      <workItem from="1677603816419" duration="14062000" />
+      <workItem from="1677603816419" duration="15228000" />
+      <workItem from="1677657538875" duration="11195000" />
+      <workItem from="1677674448843" duration="6421000" />
     </task>
     <task id="LOCAL-00001" summary="error">
       <created>1677438127221</created>
@@ -137,7 +139,21 @@
       <option name="project" value="LOCAL" />
       <updated>1677629822029</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="HomeWork15. badWords review 1.1">
+      <created>1677631277896</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1677631277896</updated>
+    </task>
+    <task id="LOCAL-00007" summary="HomeWork15. badWords review 1.2">
+      <created>1677671502294</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1677671502294</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,7 +170,15 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="feature-Passport" />
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="date">
+                    <value>
+                      <list>
+                        <option value="1677066476453" />
+                        <option value="" />
                       </list>
                     </value>
                   </entry>
@@ -197,6 +221,17 @@
             </list>
           </value>
         </entry>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
       </map>
     </option>
   </component>
@@ -206,7 +241,9 @@
     <MESSAGE value="HomeWork15_passport" />
     <MESSAGE value="HomeWork15. badWords" />
     <MESSAGE value="HomeWork15. badWords review" />
-    <option name="LAST_COMMIT_MESSAGE" value="HomeWork15. badWords review" />
+    <MESSAGE value="HomeWork15. badWords review 1.1" />
+    <MESSAGE value="HomeWork15. badWords review 1.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="HomeWork15. badWords review 1.2" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
