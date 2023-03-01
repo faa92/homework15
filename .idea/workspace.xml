@@ -51,7 +51,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.TextBlackListFilter">
+  <component name="RunManager" selected="Application.homework15">
     <configuration name="TextBlackListFilter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="by.tms.antonfedoseev.homework.TextBlackListFilter" />
       <module name="homework15" />
@@ -80,8 +80,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TextBlackListFilter" />
         <item itemvalue="Application.homework15" />
+        <item itemvalue="Application.TextBlackListFilter" />
       </list>
     </recent_temporary>
   </component>
@@ -95,7 +95,8 @@
       <updated>1677350612801</updated>
       <workItem from="1677397956628" duration="15418000" />
       <workItem from="1677499937609" duration="15624000" />
-      <workItem from="1677586372746" duration="5803000" />
+      <workItem from="1677586372746" duration="6709000" />
+      <workItem from="1677603816419" duration="12798000" />
     </task>
     <task id="LOCAL-00001" summary="error">
       <created>1677438127221</created>
@@ -118,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677590372704</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="HomeWork15. badWords">
+      <created>1677600510753</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1677600510753</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

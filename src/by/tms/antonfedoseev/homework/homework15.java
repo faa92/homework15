@@ -52,17 +52,25 @@ public class homework15 {
                         blrPassport.isExpired(LocalDate.now(ZoneId.of("Europe/Minsk"))));
             }
             case 2 -> {
-                System.out.println("Enter bad words separated by comma");
-                String userBadWords = scanner.nextLine();
-                String[] inputArrBadWords = userBadWords.split(", ");
+                System.out.println("Enter string of bad words (word, word, word, ): ");
+                Scanner scanner1 = new Scanner(System.in);
+                String userBW = scanner1.nextLine();
+                TextBlackListFilter filter = new TextBlackListFilter(userBW);
+                System.out.println("Enter string to check: ");
+                String userText = scanner1.nextLine();
 
-                TextBlackListFilter filter = new TextBlackListFilter(inputArrBadWords);
-                System.out.println();
+                System.out.println("Are there any bad words?");
+                System.out.println(filter.hasBadWords(userText));
+
+                System.out.println("How many are there?");
+                System.out.println(filter.getCountBadWords(userText));
+
+                System.out.println("String with hidden bad words: ");
+                System.out.println(filter.hideBadWords(userText));
             }
             case 0 -> {
-                return;
+                System.exit(0);
             }
-
         }
     }
 }

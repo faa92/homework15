@@ -5,14 +5,14 @@ import java.time.LocalDate;
 public class BlrPassport {
     public static final int LENGTH_ID_NUMBER_BLR = 14;
     public static final int LENGTH_PASSPORT_NUMBER = 9;
-    private String lastName;
-    private String name;
-    private String gender;
-    private LocalDate dateOfBirth;
-    private String passportNumber;
-    private String identificationNumber;
-    private LocalDate dateOfIssue;
-    private LocalDate dateOfExpiry;
+    private final String lastName;
+    private final String name;
+    private final String gender;
+    private final LocalDate dateOfBirth;
+    private final String passportNumber;
+    private final String identificationNumber;
+    private final LocalDate dateOfIssue;
+    private final LocalDate dateOfExpiry;
 
     public BlrPassport(String lastName, String name, String gender, LocalDate dateOfBirth, String passportNumber,
                        String identificationNumber, LocalDate dateOfIssue, LocalDate dateOfExpiry) {
@@ -50,19 +50,23 @@ public class BlrPassport {
         }
         return identificationNumber.matches("\\d{7}[ABCKEMH]\\d{3}(PB|BA|BI)\\d");
     }
-    public boolean isValidNameAndLastName (String name, String lastName) {
+
+    public boolean isValidNameAndLastName(String name, String lastName) {
         if (name == null || lastName == null) {
             throw new IllegalArgumentException("Invalid name or lastname");
         }
         return name.matches("^[a-zA-Z]+$") && lastName.matches("^[a-zA-Z]+$");
     }
-    public boolean isValidDataUse (LocalDate dateOfIssue, LocalDate dateOfExpiry) {
-        return  (dateOfIssue.isBefore(dateOfExpiry));
+
+    public boolean isValidDataUse(LocalDate dateOfIssue, LocalDate dateOfExpiry) {
+        return (dateOfIssue.isBefore(dateOfExpiry));
     }
-    public boolean isExpired (LocalDate now) {
-    return now.isBefore(dateOfExpiry);
+
+    public boolean isExpired(LocalDate now) {
+        return now.isBefore(dateOfExpiry);
     }
-    public String toString () {
+
+    public String toString() {
         return "Belarusian Passport: \n" +
                 "Last name - " + lastName + "\n" +
                 "Name - " + name + "\n" +

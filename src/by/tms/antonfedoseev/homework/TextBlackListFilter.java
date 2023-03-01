@@ -1,14 +1,13 @@
 package by.tms.antonfedoseev.homework;
 
-import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class TextBlackListFilter {
     private String[] badWords;
 
-    public TextBlackListFilter(String... badWords) {
-        this.badWords = Arrays.copyOf(badWords, badWords.length);
+    public TextBlackListFilter(String badWords) {
+        this.badWords = badWords.split(", ");
     }
 
     public boolean hasBadWords(String text) {
@@ -17,8 +16,9 @@ public class TextBlackListFilter {
         }
         for (int i = 0; i < badWords.length; i++) {
             boolean res;
-            Pattern pattern = Pattern.compile("\\b" + badWords[i] + "\\b", Pattern.UNICODE_CHARACTER_CLASS |
-                    Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
+            Pattern pattern = Pattern.compile("\\b" + Pattern.quote(badWords[i]) + "\\b",
+                    Pattern.UNICODE_CHARACTER_CLASS |
+                            Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
             Matcher matcher = pattern.matcher(text);
             res = matcher.find();
             if (res) {
@@ -34,10 +34,11 @@ public class TextBlackListFilter {
         }
         int count = 0;
         for (int i = 0; i < badWords.length; i++) {
-            Pattern pattern = Pattern.compile("\\b" + badWords[i] + "\\b", Pattern.UNICODE_CHARACTER_CLASS |
-                    Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
+            Pattern pattern = Pattern.compile("\\b" + Pattern.quote(badWords[i]) + "\\b",
+                    Pattern.UNICODE_CHARACTER_CLASS |
+                            Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
             Matcher matcher = pattern.matcher(text);
-            while (matcher.find()) {
+            if (matcher.find()) {
                 count++;
             }
         }
@@ -49,18 +50,15 @@ public class TextBlackListFilter {
             throw new IllegalArgumentException("Enter text!");
         }
         for (int i = 0; i < badWords.length; i++) {
-            Pattern pattern = Pattern.compile("\\b" + badWords[i] + "\\b", Pattern.UNICODE_CHARACTER_CLASS |
-                    Pattern.UNICODE_CASE | Pattern.CASE_INSENSITIVE);
+            Pattern pattern = Pattern.compile("\\b" + Pattern.quote(badWords[i]) + "\\b",
+                    Pattern.UNICODE_CHARACTER_CLASS |
+                            Pattern.UNICODE_CASE | Pattern.CASE_INSENSITIVE);
             Matcher matcher = pattern.matcher(text);
-            text = matcher.replaceAll("####");
+            text = text.replaceAll(badWords[i], "####");
         }
         return text;
     }
 
-//    public Pattern getPattern (String text) {
-//        return Pattern.compile("\\b" + badWords[i] + "\\b", Pattern.UNICODE_CHARACTER_CLASS |
-//                Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
-//    }
 
 
 }
