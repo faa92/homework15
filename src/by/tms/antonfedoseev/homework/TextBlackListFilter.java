@@ -26,6 +26,7 @@ public class TextBlackListFilter {
 //                return true;
 //            }
 //        }
+
         for (int i = 0; i < badWords.length; i++) {
             Pattern pattern = this.pattern[text.length()];
             Matcher matcher = pattern.matcher(text);
