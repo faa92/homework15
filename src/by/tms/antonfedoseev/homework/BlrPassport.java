@@ -7,14 +7,14 @@ public class BlrPassport {
     public static final int LENGTH_PASSPORT_NUMBER = 9;
     private final String lastName;
     private final String name;
-    private final String gender;
+    private final Gender gender;
     private final LocalDate dateOfBirth;
     private final String passportNumber;
     private final String identificationNumber;
     private final LocalDate dateOfIssue;
     private final LocalDate dateOfExpiry;
 
-    public BlrPassport(String lastName, String name, String gender, LocalDate dateOfBirth, String passportNumber,
+    public BlrPassport(String lastName, String name, Gender gender, LocalDate dateOfBirth, String passportNumber,
                        String identificationNumber, LocalDate dateOfIssue, LocalDate dateOfExpiry) {
         if (isValidPassport(lastName, name, passportNumber, identificationNumber, dateOfIssue, dateOfExpiry)) {
             this.lastName = lastName;
@@ -52,13 +52,13 @@ public class BlrPassport {
         if (name == null || lastName == null) {
             throw new IllegalArgumentException("Invalid name or lastname");
         }
-        return name.matches("^[a-zA-Z]+$") && lastName.matches("^[a-zA-Z]+$");
+        return name.matches("[a-zA-Z]") && lastName.matches("[a-zA-Z]");
     }
     public boolean isValidDataUse(LocalDate dateOfIssue, LocalDate dateOfExpiry) {
         return (dateOfIssue.isBefore(dateOfExpiry));
     }
     public boolean isExpired(LocalDate now) {
-        return now.isBefore(dateOfExpiry);
+        return now.isAfter(dateOfExpiry);
     }
     public String toString() {
         return "Belarusian Passport: \n" +

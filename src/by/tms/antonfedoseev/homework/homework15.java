@@ -16,31 +16,32 @@ public class homework15 {
         int task = scanner.nextInt();
         switch (task) {
             case 1 -> {
+                Scanner scanner2 = new Scanner(System.in);
                 System.out.println("Enter your last name: ");
-                String userLastName = scanner.nextLine();
+                String userLastName = scanner2.nextLine();
 
                 System.out.println("Enter yor name: ");
-                String userName = scanner.nextLine();
+                String userName = scanner2.nextLine();
 
-                System.out.println("Enter your gender (Man or Woman): ");
-                String userGender = scanner.nextLine();
+                System.out.println("Enter your gender (MAN, WOMAN, THEY): ");
+                Gender userGender = Gender.valueOf(scanner2.nextLine());
 
                 System.out.println("Enter your date of berth (00.00.0000): ");
-                LocalDate userDateOfBerth = LocalDate.parse(scanner.nextLine(),
+                LocalDate userDateOfBerth = LocalDate.parse(scanner2.nextLine(),
                         DateTimeFormatter.ofPattern("dd.MM.yyyy"));
 
                 System.out.println("Enter passport number: ");
-                String userPassportNumber = scanner.nextLine();
+                String userPassportNumber = scanner2.nextLine();
 
                 System.out.println("Enter identification number: ");
-                String userIdentificationNumber = scanner.nextLine();
+                String userIdentificationNumber = scanner2.nextLine();
 
                 System.out.println("Enter date of issue (00.00.0000): ");
-                LocalDate userDateOfIssue = LocalDate.parse(scanner.nextLine(),
+                LocalDate userDateOfIssue = LocalDate.parse(scanner2.nextLine(),
                         DateTimeFormatter.ofPattern("dd.MM.yyyy"));
 
                 System.out.println("Enter date of expiry (00.00.0000): ");
-                LocalDate userDateOfExpiry = LocalDate.parse(scanner.nextLine(),
+                LocalDate userDateOfExpiry = LocalDate.parse(scanner2.nextLine(),
                         DateTimeFormatter.ofPattern("dd.MM.yyyy"));
 
                 BlrPassport blrPassport = new BlrPassport(userLastName, userName, userGender, userDateOfBerth,
