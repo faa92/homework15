@@ -4,7 +4,6 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
-
 public class homework15 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

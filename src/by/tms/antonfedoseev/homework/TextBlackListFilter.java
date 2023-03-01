@@ -5,11 +5,9 @@ import java.util.regex.Pattern;
 
 public class TextBlackListFilter {
     private String[] badWords;
-
     public TextBlackListFilter(String badWords) {
         this.badWords = badWords.split(", ");
     }
-
     public boolean hasBadWords(String text) {
         if (text == null) {
             throw new IllegalArgumentException("Enter text!");
@@ -27,7 +25,6 @@ public class TextBlackListFilter {
         }
         return false;
     }
-
     public int getCountBadWords(String text) {
         if (text == null) {
             throw new IllegalArgumentException("Enter text!");
@@ -44,7 +41,6 @@ public class TextBlackListFilter {
         }
         return count;
     }
-
     public String hideBadWords(String text) {
         if (text == null) {
             throw new IllegalArgumentException("Enter text!");
@@ -58,7 +54,4 @@ public class TextBlackListFilter {
         }
         return text;
     }
-
-
-
 }
