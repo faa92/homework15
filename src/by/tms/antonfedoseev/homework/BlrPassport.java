@@ -49,9 +49,6 @@ public class BlrPassport {
         return identificationNumber.matches("\\d{7}[ABCKEMH]\\d{3}(PB|BA|BI)\\d");
     }
     public boolean isValidNameAndLastName(String name, String lastName) {
-        if (name == null || lastName == null) {
-            throw new IllegalArgumentException("Invalid name or lastname");
-        }
         return name.matches("[a-zA-Z]") && lastName.matches("[a-zA-Z]");
     }
     public boolean isValidDataUse(LocalDate dateOfIssue, LocalDate dateOfExpiry) {

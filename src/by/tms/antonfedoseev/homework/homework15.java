@@ -54,8 +54,10 @@ public class homework15 {
             case 2 -> {
                 System.out.println("Enter string of bad words (word, word, word, ): ");
                 Scanner scanner1 = new Scanner(System.in);
-                String userBW = scanner1.nextLine();
+                String[] userBW = scanner1.nextLine().split("\\s*,\\s*");
+
                 TextBlackListFilter filter = new TextBlackListFilter(userBW);
+
                 System.out.println("Enter string to check: ");
                 String userText = scanner1.nextLine();
 
