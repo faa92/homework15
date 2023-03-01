@@ -77,6 +77,12 @@ public class BlrPassport {
                 "Date of issue - " + dateOfIssue + "\n" +
                 "Date of expiry - " + dateOfExpiry;
     }
+
+//    LocalDate passportExpirationDate = LocalDate.of(2025, 2, 13);
+//    boolean expired = nowDate.isAfter(passportExpirationDate);
+//System.out.println(expired);
+
+
 }
 
 
